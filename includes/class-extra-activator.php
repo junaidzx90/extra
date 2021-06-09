@@ -35,9 +35,9 @@ class Extra_Activator {
 	
 		$extra_v1 = "CREATE TABLE IF NOT EXISTS `{$wpdb->prefix}extra_v1` (
 			`ID` INT NOT NULL AUTO_INCREMENT,
-			`numar_comanda` INT NOT NULL,
+			`numar_comanda` FLOAT NOT NULL,
 			`extra_euro` FLOAT NOT NULL,
-			`valoare_tva` INT NOT NULL,
+			`valoare_tva` FLOAT NOT NULL,
 			PRIMARY KEY (`ID`)) ENGINE = InnoDB";
 			dbDelta($extra_v1);
 	}

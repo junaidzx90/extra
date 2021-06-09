@@ -53,7 +53,7 @@ require_once EXTRA_PATH.'admin/class-extra-admin.php';
                 </tr>
                 <tr>
                     <th><label for="extra_euro">Curs Euro</label></th>
-                    <td><input readonly type="text" name="extra_euro" id="extra_euro" value="<?php echo $eur; ?>" placeholder="Curs Euro"></td>
+                    <td><input readonly type="number" name="extra_euro" id="extra_euro" value="<?php echo $eur; ?>" placeholder="Curs Euro"></td>
                 </tr>
                 <tr>
                     <th><label for="extra_valoare_tva">Valoare TVA</label></th>

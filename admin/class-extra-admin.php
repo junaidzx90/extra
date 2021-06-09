@@ -51,7 +51,7 @@ class Extra_Admin {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-		// Wp cron schedules
+		// Wp cron schedules https://developer.wordpress.org/reference/hooks/cron_schedules/
 		add_filter( 'cron_schedules', [$this,'extra_cron_add_twice_daily'] );
 		if ( ! wp_next_scheduled( 'extra_eur_cron' ) ) {
 			wp_schedule_event( time(), 'twice_daily', 'extra_eur_cron');
@@ -140,10 +140,10 @@ class Extra_Admin {
 
 			$numar_comanda = intval($data);
 			if($data_id){
-				$wpdb->update($wpdb->prefix.'extra_v1', array('numar_comanda' => $numar_comanda), array('ID' => $data_id), array('%d'), array('%d'));
+				$wpdb->update($wpdb->prefix.'extra_v1', array('numar_comanda' => $numar_comanda), array('ID' => $data_id), array('%f'), array('%d'));
 				return true;
 			}else{
-				$wpdb->insert($wpdb->prefix.'extra_v1', array('numar_comanda' => $numar_comanda), array('%d'));
+				$wpdb->insert($wpdb->prefix.'extra_v1', array('numar_comanda' => $numar_comanda), array('%f'));
 				return true;
 			}
 
@@ -161,10 +161,10 @@ class Extra_Admin {
 
 			$valoare_tva = intval($data);
 			if($data_id){
-				$wpdb->update($wpdb->prefix.'extra_v1', array('valoare_tva' => $valoare_tva), array('ID' => $data_id), array('%d'), array('%d'));
+				$wpdb->update($wpdb->prefix.'extra_v1', array('valoare_tva' => $valoare_tva), array('ID' => $data_id), array('%f'), array('%d'));
 				return true;
 			}else{
-				$wpdb->insert($wpdb->prefix.'extra_v1', array('valoare_tva' => $valoare_tva), array('%d'));
+				$wpdb->insert($wpdb->prefix.'extra_v1', array('valoare_tva' => $valoare_tva), array('%f'));
 				return true;
 			}
 
