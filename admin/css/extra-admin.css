@@ -1,0 +1,26 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ #extra_table,#cronjobsetup{
+     width: 500px;
+ }
+ #cronjobsetup tbody tr,
+ #extra_table tbody tr {
+    margin-bottom: 8px;
+    overflow: hidden;
+    display: block;
+ }
+ #cronjobsetup tbody tr th,
+ #extra_table tbody tr th{
+    text-align: left;
+ }
+ #extra_table tbody tr th,#cronjobsetup tbody tr th, #extra_table tbody tr td,#cronjobsetup tbody tr td{
+     width: 50%;
+     margin-bottom: 10px;
+ }
+ .errors{
+     padding-left: 10px;
+     color: red;
+ }
