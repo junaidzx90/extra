@@ -138,7 +138,7 @@ class Extra_Admin {
 			global $wpdb;
 			$data_id = $wpdb->get_var("SELECT ID FROM {$wpdb->prefix}extra_v1");
 
-			$numar_comanda = intval($data);
+			$numar_comanda = floatval($data);
 			if($data_id){
 				$wpdb->update($wpdb->prefix.'extra_v1', array('numar_comanda' => $numar_comanda), array('ID' => $data_id), array('%f'), array('%d'));
 				return true;
@@ -159,7 +159,7 @@ class Extra_Admin {
 			global $wpdb;
 			$data_id = $wpdb->get_var("SELECT ID FROM {$wpdb->prefix}extra_v1");
 
-			$valoare_tva = intval($data);
+			$valoare_tva = floatval($data);
 			if($data_id){
 				$wpdb->update($wpdb->prefix.'extra_v1', array('valoare_tva' => $valoare_tva), array('ID' => $data_id), array('%f'), array('%d'));
 				return true;

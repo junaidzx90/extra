@@ -49,15 +49,15 @@ require_once EXTRA_PATH.'admin/class-extra-admin.php';
                 
                 <tr>
                     <th><label for="extra_numar_comanda">Numar comanda</label></th>
-                    <td><input type="number" name="extra_numar_comanda" id="extra_numar_comanda" value="<?php echo $numar_comanda; ?>" placeholder="Numar comanda"></td>
+                    <td><input type="number" step="any" name="extra_numar_comanda" id="extra_numar_comanda" value="<?php echo $numar_comanda; ?>" placeholder="Numar comanda"></td>
                 </tr>
                 <tr>
                     <th><label for="extra_euro">Curs Euro</label></th>
-                    <td><input readonly type="number" name="extra_euro" id="extra_euro" value="<?php echo $eur; ?>" placeholder="Curs Euro"></td>
+                    <td><input readonly type="number" step="any" name="extra_euro" id="extra_euro" value="<?php echo $eur; ?>" placeholder="Curs Euro"></td>
                 </tr>
                 <tr>
                     <th><label for="extra_valoare_tva">Valoare TVA</label></th>
-                    <td><input type="number" name="extra_valoare_tva" id="extra_valoare_tva" value="<?php echo $valoare_tva; ?>" placeholder="Valoare TVA"></td>
+                    <td><input type="number" step="any" name="extra_valoare_tva" id="extra_valoare_tva" value="<?php echo $valoare_tva; ?>" placeholder="Valoare TVA"></td>
                 </tr>
             </tbody>
         </table>
